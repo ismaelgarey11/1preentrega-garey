@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulador de Ecommerce</title>
 </head>
 <body>
-    <main>
-        <div class="logo">vinland</div>
-    </main>
+    <h1>vinland store</h1>
+
+    <div id="productos">
+        <h2>Productos Disponibles</h2>
+        <ul>
+            <li>kimetsu no yaiba 10 - $1000 <button onclick="agregarAlCarrito('kimetsu no yaiba 10', 1000)">Agregar al Carrito</button></li>
+            <li>shingeki no kyoyin 5 - $2500 <button onclick="agregarAlCarrito('shingeki no kyoyin 5', 2500)">Agregar al Carrito</button></li>
+            <li>vinland saga 1 - $5000 <button onclick="agregarAlCarrito('vinland saga 1', 5000)">Agregar al Carrito</button></li>
+        </ul>
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista">
+          
+        </ul>
+        <p>Total a pagar: $<span id="total">0</span></p>
+        <button onclick="aplicarDescuento(10)">Aplicar Descuento del 10%</button>
+    </div>
+
+   <script src="javascript.js"></script>
 </body>
-<script src="javascript.js"></script>
 </html>

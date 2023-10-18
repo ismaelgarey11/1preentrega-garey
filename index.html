@@ -1,29 +1,126 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Simulador de Ecommerce</title>
-</head>
-<body>
-    <h1>vinland store</h1>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Tienda</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Tienda</h1>
 
-    <div id="productos">
-        <h2>Productos Disponibles</h2>
-        <ul>
-            <li>kimetsu no yaiba 10 - $1000 <button onclick="agregarAlCarrito('kimetsu no yaiba 10', 1000)">Agregar al Carrito</button></li>
-            <li>shingeki no kyoyin 5 - $2500 <button onclick="agregarAlCarrito('shingeki no kyoyin 5', 2500)">Agregar al Carrito</button></li>
-            <li>vinland saga 1 - $5000 <button onclick="agregarAlCarrito('vinland saga 1', 5000)">Agregar al Carrito</button></li>
-        </ul>
-    </div>
+			<div class="container-icon">
+				<div class="container-cart-icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="icon-cart"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+						/>
+					</svg>
+					<div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+				</div>
 
-    <div id="carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="carrito-lista">
-          
-        </ul>
-        <p>Total a pagar: $<span id="total">0</span></p>
-        <button onclick="aplicarDescuento(10)">Aplicar Descuento del 10%</button>
-    </div>
+				<div class="container-cart-products hidden-cart">
+					<div class="row-product hidden">
+						<div class="cart-product">
+							<div class="info-cart-product">
+								<span class="cantidad-producto-carrito">1</span>
+								<p class="titulo-producto-carrito">Zapatos Nike</p>
+								<span class="precio-producto-carrito">$80</span>
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						</div>
+					</div>
 
-   <script src="javascript.js"></script>
-</body>
+					<div class="cart-total hidden">
+						<h3>Total:</h3>
+						<span class="total-pagar">$200</span>
+					</div>
+					<p class="cart-empty">El carrito está vacío</p>
+				</div>
+			</div>
+		</header>
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img src="./images/bleachremix01.jpg" alt="Bleach 01">
+				</figure>
+				<div class="info-product">
+					<h2>Bleach 01</h2>
+					<p class="price">$1500</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="./images/bluelock05.jpg" alt="Blue Lock 05">
+				</figure>
+				<div class="info-product">
+					<h2>Blue Lock 05</h2>
+					<p class="price">$1500</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="./images/chainsawman04.jpg" alt="Chainsaw man 04">
+				</figure>
+				<div class="info-product">
+					<h2>Chainsaw man 04</h2>
+					<p class="price">$1500</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="./images/demonslayer20.jpg" alt="Demon slayer 20">
+				</figure>
+				<div class="info-product">
+					<h2>Demon slayer 20</h2>
+					<p class="price">$2000</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="./images/demonslayer23.jpg" alt="Demon slayer 23">
+				</figure>
+				<div class="info-product">
+					<h2>Demon slayer 23</h2>
+					<p class="price">$2000</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="carrito.js"></script>
+	</body>
 </html>
